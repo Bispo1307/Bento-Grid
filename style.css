@@ -22,18 +22,17 @@ body {
     justify-content: center;
 
     width: 100vw;
-    min-height: 100vh;
-    padding: 10%;
+    height: 100vh;
+    padding: 30px;
 }
 
 .container {
     width: 100%;
     height: 100%;
 
-    grid-template-columns: repeat(8, 1fr);
-    grid-template-rows: repeat(8, 1fr);
     display: grid;
-    gap: 30px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 
 .box-1 {
@@ -46,7 +45,7 @@ body {
 }
 
 .box-1 .text {
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .box-1 .text h2 {
@@ -70,7 +69,7 @@ body {
 
 .box-1 .image img {
     width: 100%;
-    max-width: 270px;
+    max-width: 250px;
     height: auto;
 }
 
@@ -90,10 +89,11 @@ body {
 }
 
 .box-2 .text h1 {
-    font-size: 78px;
+    font-size: 64px;
     font-weight: 500;
     font-weight: 500;
     color: var(--white);
+    text-align: center;
 }
 
 .box-2 .text span {
@@ -166,45 +166,53 @@ body {
     padding: 30px;
     border-radius: 12px;
     box-shadow: 1px 1px 10px hsla(0, 0%, 0%, 0.3);
-}
-
-.box-4 .image {
-    margin-top: 10px;
-}
-
-.box-4 .image img {
-    width: 500px;
-    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .box-4 .text {
-    margin-top: 50px;
+    margin-top: 10px;
 }
 
-.box-4 .text h3 {
+.box-4 .text h2 {
     font-size: 48px;
     font-weight: 500;
     color: var(--black);
+}
+
+.box-4 .image {
+    margin-top: 20px;
+}
+
+.box-4 .image img {
+    width: 370px;
+    height: auto;
 }
 
 .box-5 {
     grid-row: 2 / 4;
     grid-column: 2 / 3;
-    background-color: var(--yellow-500);
+    background-color: var(--white);
     padding: 30px;
     border-radius: 12px;
     box-shadow: 1px 1px 10px hsla(0, 0%, 0%, 0.3);
 }
 
+.box-5 .image {
+    margin-bottom: 20px;
+}
+
+.box-5 .image img {
+    width: 400px;
+    height: auto;
+}
+
 .box-5 .text h3 {
-    font-size: 48px;
+    font-size: 32px;
     font-weight: 500;
     color: var(--black);
     line-height: 58px;
-}
-
-.box-5 .image {
-    margin-top: 20px;
 }
 
 .box-6 {
@@ -216,8 +224,8 @@ body {
     box-shadow: 1px 1px 10px hsla(0, 0%, 0%, 0.3);
 }
 
-.box-6 .text h2 {
-    font-size: 64px;
+.box-6 .text h3 {
+    font-size: 32px;
     font-weight: 500;
     color: var(--black);
 }
@@ -241,7 +249,7 @@ body {
 }
 
 .box-7 .text h1 {
-    font-size: 78px;
+    font-size: 64px;
     font-weight: 500;
     color: var(--black);
 }
@@ -260,6 +268,12 @@ body {
     margin-top: 30px;
 }
 
+.box-7 .image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
 .box-8 {
     grid-row: 4 / 5;
     grid-column: 3 / 5;
@@ -275,8 +289,18 @@ body {
     justify-content: center;
 }
 
+.box-8 .image {
+    margin-right: 20px;
+}
+
+.box-8 .image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
 .box-8 .text h2 {
-    font-size: 64px;
+    font-size: 48px;
     font-weight: 500;
     color: var(--white);
 }
@@ -284,6 +308,11 @@ body {
 @media (max-width: 500px) {
     body {
         padding: 20px;
+    }
+
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
     }
 
     .box-1 {
